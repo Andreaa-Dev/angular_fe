@@ -18,7 +18,6 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.products$ = this.store.select('products');
-    console.log(this.products$, 'product');
     // Dispatch the loadProducts action when the component initializes
     this.store.dispatch(ProductsActions.loadProducts());
   }
