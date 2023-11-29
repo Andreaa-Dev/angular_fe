@@ -1,0 +1,11 @@
+<div *ngFor="let product of products$ | async">
+  // one-way binding: interpolation
+  <p>{{ product.title }}</p>
+  <p>{{ product.price }}</p>
+
+  <a
+    *ngFor="let product of products$"
+    [routerLink]="['/products', product.id]"
+    >{{ product.name }}</a
+  >
+</div>
