@@ -31,14 +31,16 @@
 
   4.2 Step 2: configure Styles
 
-  ```@import 'tailwindcss/base';
-    @import 'tailwindcss/components';
-    @import 'tailwindcss/utilities';
+  ```
+  @import 'tailwindcss/base';
+  @import 'tailwindcss/components';
+  @import 'tailwindcss/utilities';
   ```
 
   customize if needed in `tailwind.config.js`
 
-  ```module.exports = {
+  ```
+  module.exports = {
   theme: {
   extend: {
   backgroundColor: {

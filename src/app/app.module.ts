@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductDetailEffects } from 'src/store/effects/productDetail.effects';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     HomeComponent,
     NavbarComponent,
     RegisterFormComponent,
+    SearchFormComponent,
   ],
   imports: [
     BrowserModule,
