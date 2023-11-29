@@ -16,5 +16,4 @@ export const productDetailReducer = createReducer(
     ProductDetailActions.loadProductDetailSuccess,
     (state, { productDetail }) => productDetail
   )
-  // ... Similarly for other CRUD actions
 );
