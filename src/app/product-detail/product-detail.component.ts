@@ -17,6 +17,7 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.productDetail$ = this.store.select('productDetail');
+    console.log(this.productDetail$, 'detail');
     this.store.dispatch(ProductDetailActions.loadProductDetail());
   }
 }

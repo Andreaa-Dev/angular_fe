@@ -9,15 +9,16 @@ import { AppState } from '../../store/store';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
   products$!: Observable<Product[]>;
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit() {
     this.products$ = this.store.select('products');
+    console.log(this.products$, 'product');
     // Dispatch the loadProducts action when the component initializes
     this.store.dispatch(ProductsActions.loadProducts());
   }
