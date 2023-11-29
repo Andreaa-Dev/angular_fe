@@ -10,5 +10,4 @@ export const productsReducer = createReducer(
   on(ProductsActions.loadProductsSuccess, (state, { products }) => [
     ...products,
   ])
-  // ... Similarly for other CRUD actions
 );

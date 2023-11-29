@@ -1,10 +1,15 @@
 <app-search-form></app-search-form>
-<div *ngIf="(products$ | async)?.length === 0">Loading...</div>
-<div *ngFor="let product of products$ | async">
-  <p>{{ product.title }}</p>
-  <p>{{ product.price }}</p>
 
-  <a [routerLink]="['/products', product.id]">
-    <button>More</button>
-  </a>
+<div *ngIf="(products$ | async)?.length === 0">Loading...</div>
+
+<div class="products">
+  <div class="product-item" *ngFor="let product of products$ | async">
+    <p>{{ product.title }}</p>
+    <p>{{ product.price }}</p>
+
+    <a [routerLink]="['/products', product.id]">
+      <button class="btn">More</button>
+    </a>
+    <button class="btn" (click)="addFavoriteHandler(product)">Fav</button>
+  </div>
 </div>

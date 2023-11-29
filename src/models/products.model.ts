@@ -1,3 +1,3 @@
-import { Product } from "./product.model";
+import { Product } from './product.model';
 
-export type ProductsState = Product[]
+export type ProductsState = Product[];

@@ -1,0 +1,21 @@
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* add style later */
+.product-item {
+  margin: 10px;
+  width: 100px;
+}
+
+.btn {
+  border: 1px solid black;
+  margin: 3px;
+  border-radius: 5px;
+  background-color: brown;
+}
