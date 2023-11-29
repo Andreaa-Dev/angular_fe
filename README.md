@@ -1,6 +1,6 @@
 # Project
 
-(Live version)[https://angular-fe-lemon.vercel.app/]
+[Live version](https://angular-fe-lemon.vercel.app/)
 
 1. Information
    1.1 Basic information
