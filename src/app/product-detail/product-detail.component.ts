@@ -20,7 +20,7 @@ export class ProductDetailComponent implements OnInit {
     console.log(this.productDetail$, 'detail');
     this.store.dispatch(
       ProductDetailActions.loadProductDetail({
-        productId: this.route.snapshot.paramMap.get('id'),
+        productId: this.route.snapshot.paramMap.get('id') as string,
       })
     );
     // this.store.dispatch(ProductDetailActions.loadProductDetail());

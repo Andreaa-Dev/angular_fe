@@ -1,4 +1,4 @@
 <div>
-  <p>product-detail works!</p>
-  <p>{{ productDetail$ }}</p>
+  <p>{{ (productDetail$ | async)?.title }}</p>
+  <p>{{ (productDetail$ | async)?.price }}</p>
 </div>

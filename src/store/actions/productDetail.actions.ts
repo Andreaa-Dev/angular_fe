@@ -3,7 +3,8 @@ import { createAction, props } from '@ngrx/store';
 import { Product } from '../../models/product.model';
 
 export const loadProductDetail = createAction(
-  '[ProductDetail] Load ProductDetail'
+  '[ProductDetail] Load ProductDetail',
+  props<{ productId: string }>()
 );
 
 export const loadProductDetailSuccess = createAction(

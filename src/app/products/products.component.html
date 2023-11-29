@@ -1,3 +1,4 @@
+<div *ngIf="(products$ | async)?.length === 0">Loading...</div>
 <div *ngFor="let product of products$ | async">
   <p>{{ product.title }}</p>
   <p>{{ product.price }}</p>
@@ -6,5 +7,3 @@
     <button>More</button>
   </a>
 </div>
-
-<div *ngIf="!products$">Loading...</div>
