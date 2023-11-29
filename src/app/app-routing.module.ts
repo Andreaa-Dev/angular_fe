@@ -5,6 +5,7 @@ import { ProductsComponent } from './products/products.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { FavoriteProductsComponent } from './favorite-products/favorite-products.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'products/:id',
     component: ProductDetailComponent,
+  },
+  {
+    path: 'products/favorite',
+    component: FavoriteProductsComponent,
   },
   {
     path: 'users/register',

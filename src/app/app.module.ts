@@ -16,6 +16,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductDetailEffects } from 'src/store/effects/productDetail.effects';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { FavoriteProductsComponent } from './favorite-products/favorite-products.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
     NavbarComponent,
     RegisterFormComponent,
     SearchFormComponent,
+    FavoriteProductsComponent,
   ],
   imports: [
     BrowserModule,
