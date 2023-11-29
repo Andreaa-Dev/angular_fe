@@ -17,7 +17,6 @@ export class ProductDetailComponent implements OnInit {
   constructor(private store: Store<AppState>, private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.productDetail$ = this.store.select('productDetail');
-    console.log(this.productDetail$, 'detail');
     this.store.dispatch(
       ProductDetailActions.loadProductDetail({
         productId: this.route.snapshot.paramMap.get('id') as string,

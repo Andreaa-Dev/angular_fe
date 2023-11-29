@@ -12,7 +12,6 @@ export class ProductDetailService {
   // Fetch product by id
   getProductDetailById(productId: string): Observable<Product> {
     const apiUrl = `https://api.escuelajs.co/api/v1/products/${productId}`; // Replace with your API endpoint
-    console.log(apiUrl, 'api');
     return this.http.get<Product>(apiUrl);
   }
 }

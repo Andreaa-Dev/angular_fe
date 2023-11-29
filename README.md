@@ -18,3 +18,36 @@
 - ng server --open
   (ng: )
   - \*ngFor: map
+
+3. State management - Ngrx
+   https://ngrx.io/
+
+4. styling - Tailwind
+
+4.1 Step 1: install packages
+
+- install packages: tailwindcss, postcss,autoprefixer
+- generate configuration file:
+
+  4.2 Step 2: configure Styles
+
+  ```@import 'tailwindcss/base';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+  ```
+
+  customize if needed in `tailwind.config.js`
+
+  ```module.exports = {
+  theme: {
+  extend: {
+  backgroundColor: {
+  'custom-color': '#your-color-code',
+  },
+  },
+  },
+  variants: {},
+  plugins: [],
+  };
+
+  ```
