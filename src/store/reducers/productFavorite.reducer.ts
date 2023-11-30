@@ -8,8 +8,8 @@ export const initialProductFavoriteState: ProductFavoriteState = [];
 
 export const productFavoriteReducer = createReducer(
   initialProductFavoriteState,
-  on(ProductFavoriteActions.loadProductFavorite, (state, { product }) => [
-    ...state,
-    product,
-  ])
+  on(ProductFavoriteActions.loadProductFavorite, (state, { product }) =>
+    // ({ ...state, products: [...state.products, product] }))
+    [...state, product]
+  )
 );

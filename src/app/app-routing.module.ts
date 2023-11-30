@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ProductsComponent } from './products/products.component';
@@ -21,7 +21,7 @@ const routes: Routes = [
     component: ProductDetailComponent,
   },
   {
-    path: 'products/favorite',
+    path: 'favorite',
     component: FavoriteProductsComponent,
   },
   {
