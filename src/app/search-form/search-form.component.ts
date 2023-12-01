@@ -26,12 +26,13 @@ export class SearchFormComponent implements OnInit {
     this.searchControl.valueChanges.subscribe((value) => {
       console.log('Search:', value);
       // Add your search logic here
-      ProductsActions.searchProductByName({ productName: value });
+      this.store.dispatch(
+        ProductsActions.searchProductByName({ productName: value })
+      );
     });
   }
 
   searchControl = new FormControl('');
-
   // onSubmit() {
   //   // dispatch search product by name
   //   console.log(this.searchForm.value);
