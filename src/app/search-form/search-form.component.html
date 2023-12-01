@@ -1,5 +1,7 @@
-<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
   <input type="userInput" id="userInput" formControlName="userInput" />
 
   <button type="submit" [disabled]="searchForm.invalid">Search</button>
-</form>
+</form> -->
+
+<input type="text" [formControl]="searchControl" />

@@ -7,7 +7,12 @@ export const initialProductState: ProductsState = [];
 
 export const productsReducer = createReducer(
   initialProductState,
-  on(ProductsActions.loadProductsSuccess, (state, { products }) => [
-    ...products,
-  ])
+  on(ProductsActions.loadProductsSuccess, (state, { products }) => products),
+  on(ProductsActions.searchProductByName, (state, { productName }) => {
+    return state.filter((product) =>
+      product.title
+        .toLocaleLowerCase()
+        .includes(productName.toLocaleLowerCase())
+    );
+  })
 );

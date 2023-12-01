@@ -3,6 +3,7 @@ import { createReducer, on } from '@ngrx/store';
 import * as ProductDetailActions from '../actions/productDetail.actions';
 import { Product } from '../../models/product.model';
 
+// initial state better null
 export const initialProductDetailState: Product = {
   id: 0,
   title: '',

@@ -1,7 +1,9 @@
 <app-search-form></app-search-form>
 
+<!-- transformation  -->
 <div *ngIf="(products$ | async)?.length === 0">Loading...</div>
 
+<!-- display the product by name -->
 <div class="products">
   <div class="product-item" *ngFor="let product of products$ | async">
     <p>{{ product.title }}</p>
@@ -11,5 +13,6 @@
       <button class="btn">More</button>
     </a>
     <button class="btn" (click)="addFavoriteHandler(product)">Fav</button>
+    <!-- <button class="btn" (click)="addCartHandler(product)">Add to cart</button> -->
   </div>
 </div>

@@ -11,6 +11,8 @@ import { AppState } from 'src/store/store';
   styleUrls: ['./favorite-products.component.css'],
 })
 export class FavoriteProductsComponent {
+  // Observable: listner - subcribe
+  // product observe change from store
   productFavorite$!: Observable<Product[]>;
 
   constructor(private store: Store<AppState>) {

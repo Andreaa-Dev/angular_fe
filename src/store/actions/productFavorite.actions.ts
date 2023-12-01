@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 import { Product } from 'src/models/product.model';
 
-export const loadProductFavorite = createAction(
+export const addProductFavorite = createAction(
   '[ProductFavorite] Load Product Favorite',
   props<{ product: Product }>()
 );

@@ -16,4 +16,3 @@ export const loadProductDetailFailure = createAction(
   '[ProductDetail] Load Product Detail Failure',
   props<{ error: any }>()
 );
-// ... Similarly for other CRUD actions

@@ -1,4 +1,4 @@
-import { createReducer, on } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 
 import { Product } from '../../models/product.model';
 import * as ProductFavoriteActions from '../actions/productFavorite.actions';
@@ -8,8 +8,13 @@ export const initialProductFavoriteState: ProductFavoriteState = [];
 
 export const productFavoriteReducer = createReducer(
   initialProductFavoriteState,
-  on(ProductFavoriteActions.loadProductFavorite, (state, { product }) =>
-    // ({ ...state, products: [...state.products, product] }))
-    [...state, product]
-  )
+  on(ProductFavoriteActions.addProductFavorite, (state, action) => {
+    const isIncluded = state.some(
+      (product) => product.id === action.product.id
+    );
+    if (!isIncluded) {
+      return [...state, action.product];
+    }
+    return state;
+  })
 );
