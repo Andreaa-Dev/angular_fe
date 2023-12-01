@@ -17,7 +17,7 @@ export class UsersService {
     return this.http.post<User>(this.userSignUpUrl, user);
   }
   // log in user
-  //   logInUser(): Observable<User> {
-  //     return this.http.post<User>(this.userLogInUrl);
-  //   }
+  logInUser(user: User): Observable<User> {
+    return this.http.post<User>(this.userLogInUrl, user);
+  }
 }

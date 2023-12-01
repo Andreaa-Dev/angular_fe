@@ -1,5 +1,9 @@
+import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import * as UserActions from '../../store/actions/user.actions';
+import { AppState } from '../../store/store';
 
 @Component({
   selector: 'app-register-form',
@@ -9,7 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterFormComponent implements OnInit {
   registerForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private store: Store<AppState>) {}
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -20,6 +24,7 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit() {
     // Handle form submission here: send to backend to log in
-    console.log(this.registerForm.value);
+    // console.log(this.registerForm.value);
+    this.store.dispatch(UserActions.signUpUserSuccess(this.registerForm.value));
   }
 }

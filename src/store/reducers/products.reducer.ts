@@ -8,7 +8,11 @@ export const initialProductState: ProductsState = [];
 export const productsReducer = createReducer(
   initialProductState,
   on(ProductsActions.loadProductsSuccess, (state, { products }) => products),
+
   on(ProductsActions.searchProductByName, (state, { productName }) => {
+    if (!productName) {
+      return state;
+    }
     return state.filter((product) =>
       product.title
         .toLocaleLowerCase()

@@ -5,5 +5,4 @@
 5. search product by name (onChange?)
 6. sort
 7. log in
-
-8. registerForm!: FormGroup (why need !)
+8. put authToken in env file

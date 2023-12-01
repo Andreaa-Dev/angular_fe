@@ -15,5 +15,5 @@ export const loadProductsFailure = createAction(
 );
 export const searchProductByName = createAction(
   '[Products] Search Products By Name',
-  props<{ productName: string }>()
+  props<{ productName: string | null }>()
 );

@@ -17,7 +17,6 @@ import { ProductCart } from 'src/models/cart.model';
 })
 export class ProductsComponent implements OnInit {
   products$!: Observable<Product[]>;
-
   constructor(private store: Store<AppState>) {}
 
   ngOnInit() {
