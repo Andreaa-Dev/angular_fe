@@ -18,13 +18,14 @@ export class RegisterFormComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(4)]],
+      name: ['', Validators.required],
+      avatar: ['', Validators.required],
     });
   }
 
   onSubmit() {
-    // Handle form submission here: send to backend to log in
-    // console.log(this.registerForm.value);
-    this.store.dispatch(UserActions.signUpUserSuccess(this.registerForm.value));
+    console.log(this.registerForm.value, 'value');
+    this.store.dispatch(UserActions.signUpUser(this.registerForm.value));
   }
 }

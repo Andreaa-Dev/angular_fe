@@ -1,12 +1,15 @@
 import { createAction, props } from '@ngrx/store';
 
-import { User } from '../../models/user.model';
+import { User, UserState } from '../../models/user.model';
 
-export const userActions = createAction('[Users] User Log In');
+export const signUpUser = createAction(
+  '[User] Sign Up User',
+  props<{ user: User }>()
+);
 
 export const signUpUserSuccess = createAction(
   '[User] Sign Up User Success',
-  props<{ user: User }>()
+  props<{ user: UserState }>()
 );
 
 export const signUpUserFailure = createAction(

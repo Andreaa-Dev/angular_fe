@@ -12,17 +12,12 @@ export class UsersEffects {
 
   signUpUser$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(UsersActions.userActions),
+      ofType(UsersActions.signUpUser),
       mergeMap((action) =>
-        this.usersService
-          .signUpUser({
-            email: 'nico@gmail.com',
-            password: '1234',
-          })
-          .pipe(
-            map((user) => UsersActions.signUpUserSuccess({ user })),
-            catchError((error) => of(UsersActions.signUpUserFailure({ error })))
-          )
+        this.usersService.signUpUser(action.user).pipe(
+          map((user) => UsersActions.signUpUserSuccess({ user })),
+          catchError((error) => of(UsersActions.signUpUserFailure({ error })))
+        )
       )
     )
   );

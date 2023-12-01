@@ -1,15 +1,15 @@
 <nav>
   <img src="favicon.ico" alt="logo" />
   <ul>
-    <a routerLink="/">Home</a>
-    <a routerLink="/products">Products</a>
-    <a routerLink="/favorite" class="nav-item">
+    <a routerLink="">Home</a>
+    <a routerLink="products">Products</a>
+    <a routerLink="favorite" class="nav-item">
       Favorite
       <span class="badge" *ngIf="(productFavorite$ | async)?.length !== 0">
         {{ (productFavorite$ | async)?.length }}
       </span>
     </a>
 
-    <a routerLink="/users/register">Register</a>
+    <a routerLink="register">Register</a>
   </ul>
 </nav>

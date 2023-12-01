@@ -25,7 +25,7 @@ const routes: Routes = [
     component: FavoriteProductsComponent,
   },
   {
-    path: 'users/register',
+    path: 'register',
     component: RegisterFormComponent,
   },
 ];
