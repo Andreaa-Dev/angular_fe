@@ -18,6 +18,7 @@ import { ProductDetailEffects } from 'src/store/effects/productDetail.effects';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { FavoriteProductsComponent } from './favorite-products/favorite-products.component';
+import { UsersEffects } from 'src/store/effects/user.effects';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,11 @@ import { FavoriteProductsComponent } from './favorite-products/favorite-products
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    EffectsModule.forRoot([ProductsEffects, ProductDetailEffects]), // Register effects here
+    EffectsModule.forRoot([
+      ProductsEffects,
+      ProductDetailEffects,
+      UsersEffects,
+    ]), // Register effects here
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
