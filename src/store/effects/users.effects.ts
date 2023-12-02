@@ -13,12 +13,13 @@ export class UsersEffects {
   signUpUser$ = createEffect(() =>
     this.actions$.pipe(
       ofType(UsersActions.signUpUser),
-      mergeMap((action) =>
-        this.usersService.signUpUser(action.user).pipe(
+      mergeMap((action) => {
+        console.log(action.user, 'user');
+        return this.usersService.signUpUser(action.user).pipe(
           map((user) => UsersActions.signUpUserSuccess({ user })),
           catchError((error) => of(UsersActions.signUpUserFailure({ error })))
-        )
-      )
+        );
+      })
     )
   );
 }

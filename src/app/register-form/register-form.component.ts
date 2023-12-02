@@ -13,9 +13,7 @@ import { AppState } from '../../store/store';
 export class RegisterFormComponent implements OnInit {
   registerForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private store: Store<AppState>) {}
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder, private store: Store<AppState>) {
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(4)]],
@@ -23,9 +21,12 @@ export class RegisterFormComponent implements OnInit {
       avatar: ['', Validators.required],
     });
   }
+  ngOnInit(): void {}
 
   onSubmit() {
     console.log(this.registerForm.value, 'value');
-    this.store.dispatch(UserActions.signUpUser(this.registerForm.value));
+    this.store.dispatch(
+      UserActions.signUpUser({ user: this.registerForm.value })
+    );
   }
 }
