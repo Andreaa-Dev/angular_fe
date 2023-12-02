@@ -21,6 +21,13 @@
   (ng: )
   - \*ngFor: map
 
+3. Concepts
+
+- ngOnInit(): void {}: A callback method that is invoked immediately after the default change detector has checked the directive's data-bound properties for the first time, and before any of the view or content children have been checked. It is invoked only once when the directive is instantiated.
+- Observable: listener - subscribe
+  product observe change from store
+  ex: productFavorite$!: Observable<Product[]>;
+
 3. State management - Ngrx
    https://ngrx.io/
 

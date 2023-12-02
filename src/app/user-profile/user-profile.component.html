@@ -1,0 +1,8 @@
+<div>
+  <p>Name: {{ (userProfile$ | async)?.name }}</p>
+  <p>Email: {{ (userProfile$ | async)?.email }}</p>
+  <img
+    src="{{ (userProfile$ | async)?.avatar }}"
+    alt="{{ (userProfile$ | async)?.name }}"
+  />
+</div>

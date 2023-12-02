@@ -19,6 +19,9 @@ import { FavoriteProductsComponent } from './favorite-products/favorite-products
 import { UsersEffects } from 'src/store/effects/users.effects';
 import { ProductsEffects } from '../store/effects/products.effects';
 import { ProductDetailEffects } from 'src/store/effects/productDetail.effects';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserComponent } from './user/user.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { ProductDetailEffects } from 'src/store/effects/productDetail.effects';
     RegisterFormComponent,
     SearchFormComponent,
     FavoriteProductsComponent,
+    UserProfileComponent,
+    UserComponent,
+    UserLoginComponent,
   ],
   imports: [
     BrowserModule,
