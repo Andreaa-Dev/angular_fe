@@ -15,5 +15,25 @@ export const cartReducer = createReducer(
     return [...state, cart];
   }),
 
-  on(CartActions.increaseQuantity, (state) => state)
+  on(CartActions.increaseQuantity, (state, { cart }) => {
+    const foundItem = state.find((item) => item.id === cart.id);
+    if (foundItem) {
+      return [
+        ...state.filter((item) => item.id !== foundItem.id),
+        { ...foundItem, quantity: foundItem.quantity + 1 },
+      ];
+    }
+    return state;
+  }),
+
+  on(CartActions.decreaseQuantity, (state, { cart }) => {
+    const foundItem = state.find((item) => item.id === cart.id);
+    if (foundItem) {
+      return [
+        ...state.filter((item) => item.id !== foundItem.id),
+        { ...foundItem, quantity: foundItem.quantity - 1 },
+      ];
+    }
+    return state;
+  })
 );

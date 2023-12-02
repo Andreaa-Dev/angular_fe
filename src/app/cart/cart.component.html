@@ -5,8 +5,17 @@
   <div class="cart_item" *ngFor="let cart of carts$ | async">
     <p>{{ cart.title }}</p>
     <p>{{ cart.price }}</p>
-    <button (click)="increaseQuantityHandler()">+</button>
+    <button (click)="increaseQuantityHandler(cart)">+</button>
     <p>{{ cart.quantity }}</p>
-    <button (click)="decreaseQuantityHandler()">-</button>
+    <button (click)="decreaseQuantityHandler(cart)">-</button>
+  </div>
+  <!-- Angular's event binding along with ngIf -->
+  <button (click)="showAlert()">Check out</button>
+  <div
+    *ngIf="isAlertVisible"
+    class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3"
+    role="alert"
+  >
+    <p class="font-bold">The order is placed successfully</p>
   </div>
 </div>

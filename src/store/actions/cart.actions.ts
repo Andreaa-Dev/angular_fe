@@ -7,6 +7,12 @@ export const addProductCart = createAction(
   props<{ product: Product }>()
 );
 
-export const increaseQuantity = createAction('[Cart] Increase Quantity Cart');
+export const increaseQuantity = createAction(
+  '[Cart] Increase Quantity Cart',
+  props<{ cart: ProductCart }>()
+);
 
-export const decreaseQuantity = createAction('[Cart] Decrease Quantity Cart');
+export const decreaseQuantity = createAction(
+  '[Cart] Decrease Quantity Cart',
+  props<{ cart: ProductCart }>()
+);

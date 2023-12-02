@@ -1,3 +1,5 @@
+- API: `https://fakeapi.platzi.com/`
+
 1. display product list
 2. product detail
 3. add favorite
@@ -7,6 +9,7 @@
 
 7. log in in component not redux ???
 8. put authToken in env file
+9. alert in cart does not work
 
 ## Notes
 
@@ -37,7 +40,32 @@
   ex: productFavorite$!: Observable<Product[]>;
 
 3. State management - Ngrx
-   https://ngrx.io/
+
+- https://ngrx.io/
+- mutate state:
+  way 1:
+
+```
+import update from 'immutability-helper';
+
+on(CartActions.increaseQuantity, (state, { cart }) => {
+  const foundItemIndex = state.findIndex((item) => item.id === cart.id);
+  if (foundItemIndex !== -1) {
+    return update(state, {
+      [foundItemIndex]: { quantity: { $set: state[foundItemIndex].quantity + 1 } },
+    });
+  }
+  return state;
+});
+```
+
+way 2
+
+```
+on(CartActions.increaseQuantity, (state, { cart }) => {
+  return state.map((item) => (item.id === cart.id ? { ...item, quantity: item.quantity + 1 } : item));
+});
+```
 
 4. styling - Tailwind
 

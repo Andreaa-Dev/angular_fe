@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { CartState, ProductCart } from 'src/models/cart.model';
+import { ProductCart } from 'src/models/cart.model';
 import { AppState } from 'src/store/store';
+import * as CartsActions from '../../store/actions/cart.actions';
 
 @Component({
   selector: 'app-cart',
@@ -11,12 +12,20 @@ import { AppState } from 'src/store/store';
 })
 export class CartComponent {
   carts$!: Observable<ProductCart[]>;
+  @Input() isAlertVisible = false;
+
   constructor(private store: Store<AppState>) {
     this.carts$ = this.store.select('cart');
   }
-  increaseQuantityHandler() {
-    // this.store.dispatch(CartActions.addProductFavorite());
+  increaseQuantityHandler(cart: ProductCart) {
+    this.store.dispatch(CartsActions.increaseQuantity({ cart }));
   }
 
-  decreaseQuantityHandler() {}
+  decreaseQuantityHandler(cart: ProductCart) {
+    this.store.dispatch(CartsActions.decreaseQuantity({ cart }));
+  }
+
+  showAlert() {
+    this.isAlertVisible = true;
+  }
 }
