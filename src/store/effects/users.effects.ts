@@ -21,4 +21,16 @@ export class UsersEffects {
       )
     )
   );
+
+  logInUser$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(UsersActions.logInUser),
+      mergeMap((action) =>
+        this.usersService.logInUser(action.user).pipe(
+          map((response) => UsersActions.logInUserSuccess({ response })),
+          catchError((error) => of(UsersActions.loInUserFailure({ error })))
+        )
+      )
+    )
+  );
 }

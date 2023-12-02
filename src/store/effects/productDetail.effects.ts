@@ -5,6 +5,7 @@ import { catchError, map, mergeMap } from 'rxjs/operators';
 
 import * as ProductDetailActions from '../actions/productDetail.actions';
 import { ProductDetailService } from '../../app/services/productDetail.service';
+import { Error } from 'src/misc/types';
 
 @Injectable()
 export class ProductDetailEffects {

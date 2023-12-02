@@ -1,3 +1,7 @@
+<div *ngIf="(productFavorite$ | async)?.length === 0">
+  The favorite list is empty
+</div>
+
 <div class="product-item" *ngFor="let product of productFavorite$ | async">
   <p>{{ product.title }}</p>
   <p>{{ product.price }}</p>

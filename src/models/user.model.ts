@@ -1,8 +1,20 @@
-export interface User {
+export type UserLogIn = {
   email: string;
   password: string;
+};
+
+export type UserSignUp = UserLogIn & {
   name: string;
   avatar: string;
-}
+};
 
-export type UserState = User & { role: string; id: number };
+export type User = UserSignUp & { role: string; id: number };
+
+export type UserState = {
+  userSignUp: UserSignUp;
+  userLogin: UserLogIn;
+};
+export type Response = {
+  access_token: string;
+  refresh_token: string;
+};
