@@ -19,7 +19,7 @@ export const signUpUserFailure = createAction(
 );
 
 export const logInUser = createAction(
-  '[User] Sign Up User',
+  '[User] Log In User',
   props<{ user: UserLogIn }>()
 );
 

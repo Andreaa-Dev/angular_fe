@@ -18,7 +18,7 @@ export const usersReducer = createReducer(
 
   on(UsersActions.logInUserSuccess, (state, { response }) => {
     // save token in local storage
-    localStorage.setItem('userToken', response.access_token);
+    localStorage.setItem('userTokenAngular', response.access_token);
     return state;
   })
 );

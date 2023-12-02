@@ -22,6 +22,7 @@ import { ProductDetailEffects } from 'src/store/effects/productDetail.effects';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
     UserProfileComponent,
     UserComponent,
     UserLoginComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { FavoriteProductsComponent } from './favorite-products/favorite-products
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
   {
     path: 'profile',
     component: UserProfileComponent,
+  },
+
+  {
+    path: 'cart',
+    component: CartComponent,
   },
 ];
 

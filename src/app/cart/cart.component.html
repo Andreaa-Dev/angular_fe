@@ -1,0 +1,12 @@
+<div *ngIf="(carts$ | async)?.length === 0">Your cart is empty</div>
+
+<div>
+  <h1>Cart</h1>
+  <div class="cart_item" *ngFor="let cart of carts$ | async">
+    <p>{{ cart.title }}</p>
+    <p>{{ cart.price }}</p>
+    <button (click)="increaseQuantityHandler()">+</button>
+    <p>{{ cart.quantity }}</p>
+    <button (click)="decreaseQuantityHandler()">-</button>
+  </div>
+</div>

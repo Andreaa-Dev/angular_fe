@@ -30,7 +30,7 @@ export class ProductsComponent implements OnInit {
     );
   }
 
-  addCartHandler(cart: ProductCart) {
-    this.store.dispatch(CartsActions.addProductCart({ cart: cart }));
+  addCartHandler(product: Product) {
+    this.store.dispatch(CartsActions.addProductCart({ product: product }));
   }
 }
