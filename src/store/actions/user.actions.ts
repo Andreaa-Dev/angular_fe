@@ -1,16 +1,16 @@
 import { createAction, props } from '@ngrx/store';
 
-import { User, UserLogIn, UserState } from '../../models/user.model';
+import { Response, User, UserLogIn, UserSignUp } from '../../models/user.model';
 import { Error } from 'src/misc/types';
 
 export const signUpUser = createAction(
   '[User] Sign Up User',
-  props<{ user: User }>()
+  props<{ user: UserSignUp }>()
 );
 
 export const signUpUserSuccess = createAction(
   '[User] Sign Up User Success',
-  props<{ user: UserState }>()
+  props<{ user: User }>()
 );
 
 export const signUpUserFailure = createAction(
@@ -28,7 +28,7 @@ export const logInUserSuccess = createAction(
   props<{ response: Response }>()
 );
 
-export const loInUserFailure = createAction(
+export const logInUserFailure = createAction(
   '[User] Log In User Failure',
   props<{ error: Error }>()
 );

@@ -28,7 +28,7 @@ export class UsersEffects {
       mergeMap((action) =>
         this.usersService.logInUser(action.user).pipe(
           map((response) => UsersActions.logInUserSuccess({ response })),
-          catchError((error) => of(UsersActions.loInUserFailure({ error })))
+          catchError((error) => of(UsersActions.logInUserFailure({ error })))
         )
       )
     )

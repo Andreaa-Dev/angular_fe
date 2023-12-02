@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { User, UserLogIn, UserState } from 'src/models/user.model';
+import { Response, User, UserLogIn, UserSignUp } from 'src/models/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -14,11 +14,11 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   // sign up user
-  signUpUser(user: User): Observable<UserState> {
-    return this.http.post<UserState>(this.userSignUpUrl, user);
+  signUpUser(user: UserSignUp): Observable<User> {
+    return this.http.post<User>(this.userSignUpUrl, user);
   }
   // log in user
-  logInUser(userLogIn: UserLogIn): Observable<User> {
-    return this.http.post<User>(this.userLogInUrl, userLogIn);
+  logInUser(userLogIn: UserLogIn): Observable<Response> {
+    return this.http.post<Response>(this.userLogInUrl, userLogIn);
   }
 }

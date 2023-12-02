@@ -21,8 +21,6 @@ export class UserLoginComponent {
   }
 
   onSubmit() {
-    this.store.dispatch(
-      UserActions.logInUserSuccess({ user: this.logInForm.value })
-    );
+    this.store.dispatch(UserActions.logInUser({ user: this.logInForm.value }));
   }
 }

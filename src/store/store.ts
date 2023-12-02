@@ -1,6 +1,6 @@
 import { ActionReducerMap } from '@ngrx/store';
 
-import { User, UserState } from 'src/models/user.model';
+import { User } from 'src/models/user.model';
 import { Product } from 'src/models/product.model';
 import { ProductsState } from '../models/products.model';
 import { ProductFavoriteState } from 'src/models/productFavorite.model';
@@ -13,7 +13,7 @@ export interface AppState {
   products: ProductsState;
   productDetail: Product;
   productFavorite: ProductFavoriteState;
-  users: UserState;
+  users: User;
 }
 
 export const reducers: ActionReducerMap<AppState> = {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { UserState } from 'src/models/user.model';
+import { User } from 'src/models/user.model';
 import { AppState } from 'src/store/store';
 
 @Component({
@@ -10,7 +10,7 @@ import { AppState } from 'src/store/store';
   styleUrls: ['./user-profile.component.css'],
 })
 export class UserProfileComponent {
-  userProfile$!: Observable<UserState>;
+  userProfile$!: Observable<User>;
   constructor(private store: Store<AppState>) {
     this.userProfile$ = this.store.select('users');
   }

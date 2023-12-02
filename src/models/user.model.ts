@@ -10,10 +10,6 @@ export type UserSignUp = UserLogIn & {
 
 export type User = UserSignUp & { role: string; id: number };
 
-export type UserState = {
-  userSignUp: UserSignUp;
-  userLogin: UserLogIn;
-};
 export type Response = {
   access_token: string;
   refresh_token: string;
