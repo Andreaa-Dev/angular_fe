@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Product } from '../../models/product.model';
-import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  private apiUrl = `${environment.apiUrl}products`; // Replace with your API endpoint
+  private apiUrl = 'https://api.escuelajs.co/api/v1/products'; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 
@@ -17,6 +16,4 @@ export class ProductsService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);
   }
-
-  //add other CRUD operations
 }
