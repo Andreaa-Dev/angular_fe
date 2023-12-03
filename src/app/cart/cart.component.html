@@ -1,6 +1,6 @@
 <div *ngIf="(carts$ | async)?.length === 0">Your cart is empty</div>
 
-<div>
+<div class="cart">
   <h1>Cart</h1>
   <div class="cart_item" *ngFor="let cart of carts$ | async">
     <p>{{ cart.title }}</p>
@@ -10,7 +10,7 @@
     <button (click)="decreaseQuantityHandler(cart)">-</button>
   </div>
   <!-- Angular's event binding along with ngIf -->
-  <button (click)="showAlert()">Check out</button>
+  <button class="btn" (click)="showAlert()">Check out</button>
   <div
     *ngIf="isAlertVisible"
     class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3"

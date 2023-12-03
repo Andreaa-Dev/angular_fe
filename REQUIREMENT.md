@@ -1,17 +1,32 @@
 - API: `https://fakeapi.platzi.com/`
 
-1. display product list
-2. product detail
-3. add favorite
-4. check item before add the fav list
-5. search product by name (onChange?)
-6. sort/filter (https://tailwindui.com/components/application-ui/elements/dropdowns)
+### Requirements
 
-7. log in in component not redux ???
-8. put authToken in env file
-9. alert in cart does not work
+- [] Item 1
+- [x] Item 2
+- [ ] Item 3
 
-## Notes
+- [x] display product list
+- [x] product detail
+- [x] add favorite
+- [x] check item before add the fav list
+      [x] search product by name (onChange)
+      [ ] sort/filter (https://tailwindui.com/components/application-ui/elements/dropdowns)
+      [x] log in in component
+      [ ] fetch user by id to display user profile
+      [ ] put authToken in env file
+      [ ] alert in cart does not work
+      [ ] navigate user to log in page after register
+      [ ] log out
+      [ ] log in with Google
+      [ ] guards to protect certain routes.
+      [ ] test
+
+### Questions
+
+1. log in in component or ngRx
+
+### Notes
 
 1. Information
    1.1 Basic information

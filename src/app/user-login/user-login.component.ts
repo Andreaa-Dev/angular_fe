@@ -1,4 +1,5 @@
 import { Store } from '@ngrx/store';
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -13,7 +14,11 @@ import * as UserActions from '../../store/actions/user.actions';
 export class UserLoginComponent {
   logInForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private store: Store<AppState>) {
+  constructor(
+    private fb: FormBuilder,
+    private store: Store<AppState>,
+    private router: Router
+  ) {
     this.logInForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(4)]],
@@ -22,5 +27,6 @@ export class UserLoginComponent {
 
   onSubmit() {
     this.store.dispatch(UserActions.logInUser({ user: this.logInForm.value }));
+    this.router.navigate(['/profile']);
   }
 }

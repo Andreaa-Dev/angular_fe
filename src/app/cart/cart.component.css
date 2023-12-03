@@ -1,3 +1,10 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .cart_item {
   display: flex;
   flex-direction: row;
@@ -10,4 +17,11 @@ button {
   margin: 3px;
   border-radius: 5px;
   width: 30px;
+}
+
+.btn {
+  border: 1px solid black;
+  margin: 3px;
+  border-radius: 5px;
+  width: 90px;
 }

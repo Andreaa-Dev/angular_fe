@@ -2,14 +2,15 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from '../../environments/environment.prod';
 import { Response, User, UserLogIn, UserSignUp } from 'src/models/user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UsersService {
-  private userSignUpUrl = 'https://api.escuelajs.co/api/v1/users/';
-  private userLogInUrl = 'https://api.escuelajs.co/api/v1/auth/login';
+  private userSignUpUrl = `${environment.apiUrl}users/`;
+  private userLogInUrl = `${environment.apiUrl}auth/login`;
 
   constructor(private http: HttpClient) {}
 
