@@ -2,25 +2,21 @@
 
 ### Requirements
 
-- [] Item 1
-- [x] Item 2
-- [ ] Item 3
-
 - [x] display product list
 - [x] product detail
 - [x] add favorite
 - [x] check item before add the fav list
-      [x] search product by name (onChange)
-      [ ] sort/filter (https://tailwindui.com/components/application-ui/elements/dropdowns)
-      [x] log in in component
-      [ ] fetch user by id to display user profile
-      [ ] put authToken in env file
-      [ ] alert in cart does not work
-      [ ] navigate user to log in page after register
-      [ ] log out
-      [ ] log in with Google
-      [ ] guards to protect certain routes.
-      [ ] test
+- [x] search product by name (onChange)
+- [ ] sort/filter (https://tailwindui.com/components/application-ui/elements/dropdowns)
+- [x] log in in component
+- [ ] fetch user by id to display user profile
+- [ ] put authToken in env file
+- [ ] alert in cart does not work
+- [ ] navigate user to log in page after register
+- [ ] log out
+- [ ] log in with Google
+- [ ] guards to protect certain routes.
+- [ ] test
 
 ### Questions
 
