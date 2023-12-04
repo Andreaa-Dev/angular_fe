@@ -23,6 +23,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { CartComponent } from './cart/cart.component';
+import { SortFormComponent } from './sort-form/sort-form.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CartComponent } from './cart/cart.component';
     UserComponent,
     UserLoginComponent,
     CartComponent,
+    SortFormComponent,
   ],
   imports: [
     BrowserModule,
