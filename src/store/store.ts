@@ -9,7 +9,7 @@ import { productsReducer } from './reducers/products.reducer';
 import { productDetailReducer } from './reducers/productDetail.reducer';
 import { productFavoriteReducer } from './reducers/productFavorite.reducer';
 import { usersReducer } from './reducers/user.reducers';
-import { cartReducer } from './reducers/ cart.reducers';
+import { cartReducer } from './reducers/cart.reducers';
 
 export interface AppState {
   products: ProductsState;

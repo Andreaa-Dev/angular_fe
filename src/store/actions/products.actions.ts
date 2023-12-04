@@ -13,7 +13,13 @@ export const loadProductsFailure = createAction(
   '[Products] Load Products Failure',
   props<{ error: Error }>()
 );
+
 export const searchProductByName = createAction(
   '[Products] Search Products By Name',
   props<{ productName: string | null }>()
+);
+
+export const sortProductByField = createAction(
+  '[Products] Sort Products By Field',
+  props<{ field: string }>()
 );

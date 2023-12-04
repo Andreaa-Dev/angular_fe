@@ -18,5 +18,14 @@ export const productsReducer = createReducer(
         .toLocaleLowerCase()
         .includes(productName.toLocaleLowerCase())
     );
+  }),
+
+  on(ProductsActions.sortProductByField, (state, { field }) => {
+    if (field === 'lowestPrice') {
+      const sortedItems = [...state].sort((a, b) => a.price - b.price);
+      console.log(sortedItems, 'sorted');
+      return sortedItems;
+    }
+    return state;
   })
 );

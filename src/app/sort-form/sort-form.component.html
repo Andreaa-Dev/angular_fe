@@ -1,1 +1,7 @@
-<p>sort-form works!</p>
+<select name="sort-form" id="sort-form" (change)="onSortOptionChange($event)">
+  <option value="">Sort by</option>
+  <option value="lowestPrice">Lowest price</option>
+  <option value="highestPrice">Highest price</option>
+  <option value="AtoZ">A-Z</option>
+  <option value="ZtoA">Z-A</option>
+</select>

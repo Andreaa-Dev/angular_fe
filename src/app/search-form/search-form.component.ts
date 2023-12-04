@@ -1,14 +1,10 @@
 import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 import { AppState } from 'src/store/store';
 import * as ProductsActions from '../../store/actions/products.actions';
+
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
@@ -24,7 +20,6 @@ export class SearchFormComponent implements OnInit {
     // });
 
     this.searchControl.valueChanges.subscribe((value) => {
-      console.log('Search:', value);
       this.store.dispatch(
         ProductsActions.searchProductByName({ productName: value })
       );
