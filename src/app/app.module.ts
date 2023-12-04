@@ -24,6 +24,7 @@ import { UserComponent } from './user/user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { CartComponent } from './cart/cart.component';
 import { SortFormComponent } from './sort-form/sort-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SortFormComponent } from './sort-form/sort-form.component';
     UserLoginComponent,
     CartComponent,
     SortFormComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

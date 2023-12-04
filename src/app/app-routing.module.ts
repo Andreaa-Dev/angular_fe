@@ -9,6 +9,8 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
 import { CartComponent } from './cart/cart.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminGuard } from './admin.guard';
 
 const routes: Routes = [
   {
@@ -44,6 +46,7 @@ const routes: Routes = [
     path: 'cart',
     component: CartComponent,
   },
+  { path: 'admin', component: DashboardComponent, canActivate: [AdminGuard] },
 ];
 
 @NgModule({
