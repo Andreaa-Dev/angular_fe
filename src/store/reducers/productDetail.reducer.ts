@@ -9,6 +9,7 @@ export const initialProductDetailState: Product = {
   title: '',
   description: '',
   price: 0,
+  images: [],
 };
 
 export const productDetailReducer = createReducer(

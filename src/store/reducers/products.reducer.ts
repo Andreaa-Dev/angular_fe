@@ -21,9 +21,36 @@ export const productsReducer = createReducer(
   }),
 
   on(ProductsActions.sortProductByField, (state, { field }) => {
+    // shorten logic here
+    // use switch?
     if (field === 'lowestPrice') {
       const sortedItems = [...state].sort((a, b) => a.price - b.price);
-      console.log(sortedItems, 'sorted');
+      return sortedItems;
+    }
+    if (field === 'highestPrice') {
+      const sortedItems = [...state].sort((a, b) => b.price - a.price);
+      return sortedItems;
+    }
+    if (field === 'AtoZ') {
+      const sortedItems = [...state].sort((a, b) => {
+        const productTitleA = a.title.toUpperCase();
+        const productTitleB = b.title.toUpperCase();
+        if (productTitleA < productTitleB) {
+          return -1;
+        }
+        return 0;
+      });
+      return sortedItems;
+    }
+    if (field === 'ZtoA') {
+      const sortedItems = [...state].sort((a, b) => {
+        const productTitleA = a.title.toUpperCase();
+        const productTitleB = b.title.toUpperCase();
+        if (productTitleA > productTitleB) {
+          return -1;
+        }
+        return 0;
+      });
       return sortedItems;
     }
     return state;
