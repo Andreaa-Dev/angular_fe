@@ -10,7 +10,6 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
 import { CartComponent } from './cart/cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AdminGuard } from './admin.guard';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 const routes: Routes = [
@@ -34,6 +33,8 @@ const routes: Routes = [
     path: 'user',
     component: UserComponent,
   },
+  // try nested route here
+
   {
     path: 'user/register',
     component: RegisterFormComponent,
@@ -47,7 +48,6 @@ const routes: Routes = [
     path: 'cart',
     component: CartComponent,
   },
-  { path: 'admin', component: DashboardComponent, canActivate: [AdminGuard] },
   { path: '**', component: ErrorPageComponent }, // Wildcard route for a 404 page
 ];
 

@@ -7,13 +7,7 @@
 <!-- display the product by name -->
 <div class="products">
   <div class="product-item" *ngFor="let product of products$ | async">
-    <div>
-      <img
-        src="{{ product.images[0] }}"
-        alt="{{ product.title }}"
-        class="img"
-      />
-    </div>
+    <img src="{{ product.images[0] }}" alt="{{ product.title }}" class="img" />
     <p>{{ product.title }}</p>
     <p>{{ product.price }}</p>
 
