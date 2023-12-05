@@ -15,10 +15,6 @@ export class SearchFormComponent implements OnInit {
   constructor(private fb: FormBuilder, private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    // this.searchForm = this.fb.group({
-    //   userInput: ['Please enter the product name', [Validators.required]],
-    // });
-
     this.searchControl.valueChanges.subscribe((value) => {
       this.store.dispatch(
         ProductsActions.searchProductByName({ productName: value })
@@ -27,8 +23,4 @@ export class SearchFormComponent implements OnInit {
   }
 
   searchControl = new FormControl(' Search product by name');
-  // onSubmit() {
-  //   // dispatch search product by name
-  //   console.log(this.searchForm.value);
-  // }
 }

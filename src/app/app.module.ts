@@ -25,6 +25,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { CartComponent } from './cart/cart.component';
 import { SortFormComponent } from './sort-form/sort-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CartComponent,
     SortFormComponent,
     DashboardComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

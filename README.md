@@ -2,6 +2,8 @@
 
 [Live version](https://angular-fe-lemon.vercel.app/)
 
+Intro is updating ...
+
 1. Tech stack
 
 - State management: ngRx
@@ -11,3 +13,5 @@
 
 - Step 1: `npm install or yarn`
 - Step 2: `ng serve --open`
+
+3. Testing
